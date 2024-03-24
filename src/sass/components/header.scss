@@ -5,7 +5,7 @@ header {
   .topbar {
     display: flex;
     width: 100%;
-    background-color: $color-2;
+    background-color: #404040;
     padding: calc($small-value / 2) $medium-value;
     .topbar_left {
       ul {
@@ -15,10 +15,13 @@ header {
           margin-right: $large-value;
 
           a {
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
             @include transition();
 
             &:hover {
-              color: #fff;
+              color: $color-2;
             }
           }
 
@@ -67,7 +70,7 @@ header {
 
             img {
               margin-top: 25px;
-              margin-bottom: -65px;
+              margin-bottom: -75px;
               max-height: 130px;
             }
           }
@@ -113,14 +116,14 @@ header {
   }
 
   .dropdown-menu {
-    background-color: $body-color;
+    background-color: #404040;
     z-index: 3;
     position: absolute;
     width: 100%;
     min-height: 360px;
 
     .inner {
-      border-top: 1px solid #af9a63;
+      border-top: 1px solid $color-2;
       display: flex;
       padding: $large-value 0;
       justify-content: space-between;
@@ -136,6 +139,7 @@ header {
 
           h3 {
             color: #fff;
+            text-transform: uppercase;
           }
 
           ul {

@@ -36,25 +36,26 @@
         align-items: center;
         
         .lastMatchInfos {
+            font-family: $ff-title;
             h2 {
                 color: #fff;
                 text-align: center;
+                font-size: 16px;
             }
 
             .lastMatchContent {
                 display: flex;
                 align-items: center;
-                margin-top: $large-value;
                 img {
                     max-height: 130px;
                 }
 
                 .score {
                     margin: 0 $large-value;
-                    font-family: $ff-title;
                     font-size: 70px;
                     letter-spacing: 1rem;
                     color: #fff;
+                    font-family: $ff-title;
                 }
             }
 
@@ -64,6 +65,7 @@
                 text-transform: uppercase;
                 text-align: center;
                 font-size: 18px;
+                font-family: $ff-title;
             }
         }
 
@@ -74,9 +76,16 @@
             .button {
                 margin-right: $large-value;
                 border-radius: 0;
+                color: #fff;
+                border: 1px solid #fff;
 
                 &:last-child {
                     margin-right: 0;
+                }
+
+                &:hover {
+                    background-color: #fff;
+                    color: $body-color;
                 }
             }
         }

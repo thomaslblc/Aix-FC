@@ -190,7 +190,7 @@ header {
 header .topbar {
   display: flex;
   width: 100%;
-  background-color: #ffb615;
+  background-color: #404040;
   padding: 0.5rem 2rem;
 }
 header .topbar .topbar_left ul {
@@ -200,10 +200,13 @@ header .topbar .topbar_left ul li {
   margin-right: 3rem;
 }
 header .topbar .topbar_left ul li a {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
   transition: all 150ms ease-in-out;
 }
 header .topbar .topbar_left ul li a:hover {
-  color: #fff;
+  color: #ffb615;
 }
 header .topbar .topbar_left ul li i {
   margin-right: 10px;
@@ -243,7 +246,7 @@ header .navbar .navbar_left ul li .navbar_logo {
 }
 header .navbar .navbar_left ul li .navbar_logo img {
   margin-top: 25px;
-  margin-bottom: -65px;
+  margin-bottom: -75px;
   max-height: 130px;
 }
 header .navbar .navbar_right {
@@ -274,14 +277,14 @@ header .navbar .navbar_right .navbar_sponsor:hover img {
   opacity: 0.8;
 }
 header .dropdown-menu {
-  background-color: #131313;
+  background-color: #404040;
   z-index: 3;
   position: absolute;
   width: 100%;
   min-height: 360px;
 }
 header .dropdown-menu .inner {
-  border-top: 1px solid #af9a63;
+  border-top: 1px solid #ffb615;
   display: flex;
   padding: 3rem 0;
   justify-content: space-between;
@@ -297,6 +300,7 @@ header .dropdown-menu .inner .dropdown-left .subMenu:last-child {
 }
 header .dropdown-menu .inner .dropdown-left .subMenu h3 {
   color: #fff;
+  text-transform: uppercase;
 }
 header .dropdown-menu .inner .dropdown-left .subMenu ul li {
   margin-bottom: 1rem;
@@ -434,24 +438,27 @@ footer .footer-links .footer-container .footer-aside .footer-logos img:last-chil
   height: 90%;
   align-items: center;
 }
+.lastMatchContainer .inner .lastMatchInfos {
+  font-family: "Chelsea Basis", sans-serif;
+}
 .lastMatchContainer .inner .lastMatchInfos h2 {
   color: #fff;
   text-align: center;
+  font-size: 16px;
 }
 .lastMatchContainer .inner .lastMatchInfos .lastMatchContent {
   display: flex;
   align-items: center;
-  margin-top: 3rem;
 }
 .lastMatchContainer .inner .lastMatchInfos .lastMatchContent img {
   max-height: 130px;
 }
 .lastMatchContainer .inner .lastMatchInfos .lastMatchContent .score {
   margin: 0 3rem;
-  font-family: "Chelsea Basis", sans-serif;
   font-size: 70px;
   letter-spacing: 1rem;
   color: #fff;
+  font-family: "Chelsea Basis", sans-serif;
 }
 .lastMatchContainer .inner .lastMatchInfos .matchHashtag {
   color: #fff;
@@ -459,6 +466,7 @@ footer .footer-links .footer-container .footer-aside .footer-logos img:last-chil
   text-transform: uppercase;
   text-align: center;
   font-size: 18px;
+  font-family: "Chelsea Basis", sans-serif;
 }
 .lastMatchContainer .inner .lastMatchButtons {
   display: flex;
@@ -467,9 +475,15 @@ footer .footer-links .footer-container .footer-aside .footer-logos img:last-chil
 .lastMatchContainer .inner .lastMatchButtons .button {
   margin-right: 3rem;
   border-radius: 0;
+  color: #fff;
+  border: 1px solid #fff;
 }
 .lastMatchContainer .inner .lastMatchButtons .button:last-child {
   margin-right: 0;
+}
+.lastMatchContainer .inner .lastMatchButtons .button:hover {
+  background-color: #fff;
+  color: #131313;
 }
 
 /*# sourceMappingURL=index.css.map */
