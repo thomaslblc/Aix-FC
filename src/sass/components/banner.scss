@@ -1,0 +1,18 @@
+.banner {
+  display: flex;
+  height: 15px;
+  --odd-background: #ffb615;
+  --even-background: #8d042d;
+  --line-height: 95px;
+  line-height: var(--line-height);
+
+  background: repeating-linear-gradient(
+    to right,
+    var(--odd-background),
+    var(--odd-background) var(--line-height),
+    var(--even-background) var(--line-height),
+    var(--even-background) calc(2 * var(--line-height))
+  );
+
+  background-size: calc(2 * var(--line-height)) 100%;
+}

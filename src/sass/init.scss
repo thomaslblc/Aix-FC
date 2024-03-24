@@ -1,0 +1,11 @@
+@import "config-variables";
+@import "config-fonts";
+@import "config-mixins";
+@import "global";
+@import "inner";
+
+
+@import "./components/banner.scss";
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/lastMatch.scss";

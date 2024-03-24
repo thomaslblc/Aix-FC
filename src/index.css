@@ -1,13 +1,418 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Lato";
+  src: url(".//fonts/Lato-BoldItalic.woff2") format("woff2"), url(".//fonts/Lato-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(".//fonts/Lato-Bold.woff2") format("woff2"), url(".//fonts/Lato-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(".//fonts/Lato-Italic.woff2") format("woff2"), url(".//fonts/Lato-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(".//fonts/Lato-Light.woff2") format("woff2"), url(".//fonts/Lato-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(".//fonts/Lato-LightItalic.woff2") format("woff2"), url(".//fonts/Lato-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(".//fonts/Lato-Regular.woff2") format("woff2"), url(".//fonts/Lato-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(".//fonts/Lato-Semibold.woff2") format("woff2"), url(".//fonts/Lato-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(".//fonts/Lato-SemiboldItalic.woff2") format("woff2"), url(".//fonts/Lato-SemiboldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chelsea Basis";
+  src: url(".//fonts/ChelseaBasis-Medium.woff2") format("woff2"), url(".//fonts/ChelseaBasis-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chelsea Basis";
+  src: url(".//fonts/ChelseaBasis-Bold.woff2") format("woff2"), url(".//fonts/ChelseaBasis-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chelsea Basis";
+  src: url(".//fonts/ChelseaBasis-Regular.woff2") format("woff2"), url(".//fonts/ChelseaBasis-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  line-height: 1.7em;
+  margin: 0;
 }
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 70px 0;
+}
+
+h1 {
+  margin: 0;
+  color: #fff;
+  padding: 5rem 0;
+  font-size: 40px;
+  font-family: "Chelsea Basis", sans-serif;
+}
+
+h2 {
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-family: "Chelsea Basis", sans-serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Chelsea Basis", sans-serif;
+}
+
+.button {
+  padding: 5px 15px;
+  background-color: transparent;
+  border-radius: 25px;
+  transition: all 150ms ease-in-out;
+}
+.button.c1 {
+  color: #131313;
+  border: 1px solid #131313;
+}
+.button.c1:hover {
+  background-color: #131313;
+  color: #ffffff;
+}
+.button.c2 {
+  color: #ffb615;
+  border: 1px solid #ffb615;
+}
+.button.c2:hover {
+  background-color: #ffb615;
+  color: #000000;
+}
+.button.c3 {
+  color: #8d042d;
+  border: 1px solid #8d042d;
+}
+.button.c3:hover {
+  background-color: #8d042d;
+  color: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+.inner {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.banner {
+  display: flex;
+  height: 15px;
+  --odd-background: #ffb615;
+  --even-background: #8d042d;
+  --line-height: 95px;
+  line-height: var(--line-height);
+  background: repeating-linear-gradient(to right, var(--odd-background), var(--odd-background) var(--line-height), var(--even-background) var(--line-height), var(--even-background) calc(2 * var(--line-height)));
+  background-size: calc(2 * var(--line-height)) 100%;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+header .topbar {
+  display: flex;
+  width: 100%;
+  background-color: #af9a63;
+  padding: 0.5rem 2rem;
+}
+header .topbar .topbar_left ul {
+  display: flex;
+}
+header .topbar .topbar_left ul li {
+  margin-right: 3rem;
+}
+header .topbar .topbar_left ul li a {
+  transition: all 150ms ease-in-out;
+}
+header .topbar .topbar_left ul li a:hover {
+  color: #fff;
+}
+header .topbar .topbar_left ul li i {
+  margin-right: 10px;
+}
+header .navbar {
+  background-color: #131313;
+  padding: 2rem 0;
+  position: relative;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar .navbar_left ul {
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+}
+header .navbar .navbar_left ul li {
+  margin-right: 3rem;
+  line-height: 1.5em;
+  display: inline-block;
+  height: 100%;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Chelsea Basis", sans-serif;
+  text-transform: uppercase;
+  transition: all 150ms ease-in-out;
+}
+header .navbar .navbar_left ul li:hover {
+  color: #ffb615;
+  cursor: pointer;
+}
+header .navbar .navbar_left ul li .navbar_logo {
+  position: relative;
+  z-index: 5;
+}
+header .navbar .navbar_left ul li .navbar_logo img {
+  margin-top: 25px;
+  margin-bottom: -65px;
+  max-height: 130px;
+}
+header .navbar .navbar_right {
+  display: flex;
+  align-items: center;
+}
+header .navbar .navbar_right span {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+header .navbar .navbar_right span i {
+  font-size: 25px;
+  color: #fff;
+  height: 100%;
+}
+header .navbar .navbar_right img {
+  margin-left: 2rem;
+  max-height: 50px;
+}
+header .dropdown-menu {
+  background-color: #131313;
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  min-height: 360px;
+}
+header .dropdown-menu .inner {
+  border-top: 1px solid #af9a63;
+  display: flex;
+  padding: 3rem 0;
+  justify-content: space-between;
+}
+header .dropdown-menu .inner .dropdown-left {
+  display: flex;
+}
+header .dropdown-menu .inner .dropdown-left .subMenu {
+  margin-right: 6rem;
+}
+header .dropdown-menu .inner .dropdown-left .subMenu:last-child {
+  margin-right: 0;
+}
+header .dropdown-menu .inner .dropdown-left .subMenu h3 {
+  color: #fff;
+}
+header .dropdown-menu .inner .dropdown-left .subMenu ul li {
+  margin-bottom: 1rem;
+  border-bottom: rgba(255, 255, 255, 0.5);
+}
+header .dropdown-menu .inner .dropdown-left .subMenu ul li:last-child {
+  margin-bottom: 0;
+}
+header .dropdown-menu .inner .dropdown-left .subMenu ul li a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 150ms ease-in-out;
+}
+header .dropdown-menu .inner .dropdown-left .subMenu ul li a:hover {
+  color: #ffb615;
+}
+header .dropdown-menu .inner .dropdown-right {
+  display: flex;
+}
+header .dropdown-menu .inner .dropdown-right .dropdown-ads a {
+  margin-right: 3rem;
+  position: relative;
+}
+header .dropdown-menu .inner .dropdown-right .dropdown-ads a:last-child {
+  margin-right: 0;
+}
+header .dropdown-menu .inner .dropdown-right .dropdown-ads a img {
+  border: 1px solid #fff;
+  width: 230px;
+  transition: all 150ms ease-in-out;
+}
+header .dropdown-menu .inner .dropdown-right .dropdown-ads a:hover img {
+  border: 1px solid #ffb615;
+}
+header .dropdown-menu .inner .dropdown-right .closeButton {
+  color: #fff;
+  font-size: 25px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  margin-left: 3rem;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  height: calc(1rem + 30px);
+  width: calc(1rem + 30px);
+  padding: 1rem;
+  transition: all 150ms ease-in-out;
+}
+header .dropdown-menu .inner .dropdown-right .closeButton:hover {
+  color: #ffb615;
+  border: 2px solid #ffb615;
+  cursor: pointer;
+}
+
+footer .footer-links {
+  background-color: #131313;
+  padding-bottom: 70px;
+}
+footer .footer-links .footer-container {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #fff;
+  padding-top: 3rem;
+}
+footer .footer-links .footer-container nav {
+  color: #fff;
+  width: 100%;
+}
+footer .footer-links .footer-container nav h3 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-size: 20px;
+}
+footer .footer-links .footer-container nav a {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 16px;
+}
+footer .footer-links .footer-container nav a:hover {
+  opacity: 1;
+}
+footer .footer-links .footer-container .footer-aside ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-links .footer-container .footer-aside ul a {
+  margin-right: 15px;
+}
+footer .footer-links .footer-container .footer-aside .footer-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-links .footer-container .footer-aside .footer-logos img {
+  margin-top: 3rem;
+  height: auto;
+  max-width: 60px;
+  margin-right: 15px;
+}
+footer .footer-links .footer-container .footer-aside .footer-logos img:last-child {
+  margin-right: 0;
+}
+
+.lastMatchContainer {
+  width: 100%;
+  height: 750px;
+  position: relative;
+}
+.lastMatchContainer img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  z-index: 2;
+}
+.lastMatchContainer:after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+/*# sourceMappingURL=index.css.map */

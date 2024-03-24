@@ -1,0 +1,26 @@
+.lastMatchContainer {
+    width: 100%;
+    height: 750px;
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        z-index: 2;
+    }
+
+    &:after {
+        content: '';
+        background-color: rgba(#000, 0.55);
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: block
+    }
+}
