@@ -5,7 +5,7 @@ header {
   .topbar {
     display: flex;
     width: 100%;
-    background-color: #af9a63;
+    background-color: $color-2;
     padding: calc($small-value / 2) $medium-value;
     .topbar_left {
       ul {
@@ -87,12 +87,27 @@ header {
           font-size: 25px;
           color: #fff;
           height: 100%;
+          cursor: pointer;
+          @include transition();
+
+          &:hover {
+            color: $color-2;
+          }
         }
       }
 
-      img {
-        margin-left: $medium-value;
-        max-height: 50px;
+      .navbar_sponsor {
+        img {
+          margin-left: $medium-value;
+          max-height: 50px;
+          @include transition();
+        }
+
+        &:hover {
+          img {
+            opacity: 0.8;
+          }
+        }
       }
     }
   }

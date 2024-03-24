@@ -60,7 +60,7 @@ function Header() {
                 </nav>
                 <div className="navbar_right">
                     <span><i className="fa-solid fa-magnifying-glass"></i></span>
-                    <img src={sponsor} alt="Partenaire Premium" />
+                    <a className="navbar_sponsor" href="https://www.virtuedrinks.com/" target="_blank" rel="noopener noreferrer"><img src={sponsor} alt="Virtue Energy, Partenaire Premium du Aix FC" /></a>
                 </div>
             </div>
             {selectedMenu && (

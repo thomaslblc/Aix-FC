@@ -190,7 +190,7 @@ header {
 header .topbar {
   display: flex;
   width: 100%;
-  background-color: #af9a63;
+  background-color: #ffb615;
   padding: 0.5rem 2rem;
 }
 header .topbar .topbar_left ul {
@@ -259,10 +259,19 @@ header .navbar .navbar_right span i {
   font-size: 25px;
   color: #fff;
   height: 100%;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
 }
-header .navbar .navbar_right img {
+header .navbar .navbar_right span i:hover {
+  color: #ffb615;
+}
+header .navbar .navbar_right .navbar_sponsor img {
   margin-left: 2rem;
   max-height: 50px;
+  transition: all 150ms ease-in-out;
+}
+header .navbar .navbar_right .navbar_sponsor:hover img {
+  opacity: 0.8;
 }
 header .dropdown-menu {
   background-color: #131313;
@@ -395,7 +404,7 @@ footer .footer-links .footer-container .footer-aside .footer-logos img:last-chil
   height: 750px;
   position: relative;
 }
-.lastMatchContainer img {
+.lastMatchContainer .cover {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -413,6 +422,54 @@ footer .footer-links .footer-container .footer-aside .footer-logos img:last-chil
   top: 0;
   left: 0;
   display: block;
+}
+.lastMatchContainer .inner {
+  position: relative;
+  z-index: 4;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: auto;
+  height: 90%;
+  align-items: center;
+}
+.lastMatchContainer .inner .lastMatchInfos h2 {
+  color: #fff;
+  text-align: center;
+}
+.lastMatchContainer .inner .lastMatchInfos .lastMatchContent {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
+.lastMatchContainer .inner .lastMatchInfos .lastMatchContent img {
+  max-height: 130px;
+}
+.lastMatchContainer .inner .lastMatchInfos .lastMatchContent .score {
+  margin: 0 3rem;
+  font-family: "Chelsea Basis", sans-serif;
+  font-size: 70px;
+  letter-spacing: 1rem;
+  color: #fff;
+}
+.lastMatchContainer .inner .lastMatchInfos .matchHashtag {
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+}
+.lastMatchContainer .inner .lastMatchButtons {
+  display: flex;
+  margin-top: 3rem;
+}
+.lastMatchContainer .inner .lastMatchButtons .button {
+  margin-right: 3rem;
+  border-radius: 0;
+}
+.lastMatchContainer .inner .lastMatchButtons .button:last-child {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=index.css.map */
