@@ -5,8 +5,9 @@ header {
   .topbar {
     display: flex;
     width: 100%;
-    background-color: #404040;
+    background-color: $color-5;
     padding: calc($small-value / 2) $medium-value;
+    
     .topbar_left {
       ul {
         display: flex;
@@ -34,7 +35,7 @@ header {
   }
 
   .navbar {
-    background-color: $body-color;
+    background-color: $color-1;
     padding: $medium-value 0;
     position: relative;
     padding: 0 $medium-value;
@@ -116,7 +117,7 @@ header {
   }
 
   .dropdown-menu {
-    background-color: #404040;
+    background-color: $color-5;
     z-index: 3;
     position: absolute;
     width: 100%;

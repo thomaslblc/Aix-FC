@@ -135,11 +135,11 @@ h3 {
   transition: all 150ms ease-in-out;
 }
 .button.c1 {
-  color: #131313;
-  border: 1px solid #131313;
+  color: #292929;
+  border: 1px solid #292929;
 }
 .button.c1:hover {
-  background-color: #131313;
+  background-color: #292929;
   color: #ffffff;
 }
 .button.c2 {
@@ -190,7 +190,7 @@ header {
 header .topbar {
   display: flex;
   width: 100%;
-  background-color: #404040;
+  background-color: #606060;
   padding: 0.5rem 2rem;
 }
 header .topbar .topbar_left ul {
@@ -212,7 +212,7 @@ header .topbar .topbar_left ul li i {
   margin-right: 10px;
 }
 header .navbar {
-  background-color: #131313;
+  background-color: #292929;
   padding: 2rem 0;
   position: relative;
   padding: 0 2rem;
@@ -277,7 +277,7 @@ header .navbar .navbar_right .navbar_sponsor:hover img {
   opacity: 0.8;
 }
 header .dropdown-menu {
-  background-color: #404040;
+  background-color: #606060;
   z-index: 3;
   position: absolute;
   width: 100%;
@@ -355,7 +355,7 @@ header .dropdown-menu .inner .dropdown-right .closeButton:hover {
 }
 
 footer .footer-links {
-  background-color: #131313;
+  background-color: #292929;
   padding-bottom: 70px;
 }
 footer .footer-links .footer-container {
@@ -452,13 +452,20 @@ footer .footer-links .footer-container .footer-aside .footer-logos img:last-chil
 }
 .lastMatchContainer .inner .lastMatchInfos .lastMatchContent img {
   max-height: 130px;
+  width: 130px;
+  object-fit: contain;
 }
-.lastMatchContainer .inner .lastMatchInfos .lastMatchContent .score {
+.lastMatchContainer .inner .lastMatchInfos .lastMatchContent .lastMatchResult .score {
   margin: 0 3rem;
   font-size: 70px;
-  letter-spacing: 1rem;
+  line-height: 1;
   color: #fff;
+  text-align: center;
   font-family: "Chelsea Basis", sans-serif;
+}
+.lastMatchContainer .inner .lastMatchInfos .lastMatchContent .lastMatchResult .score .score_separator {
+  font-size: 70px;
+  margin: 0 1rem;
 }
 .lastMatchContainer .inner .lastMatchInfos .matchHashtag {
   color: #fff;

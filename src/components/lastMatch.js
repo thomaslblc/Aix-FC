@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import illustration from "../img/illustrations/illu-5.webp";
-import homeTeam from "../img/logos/logo_aix.png";
-import awayTeam from "../img/logos/Logo_fcn.png";
+import homeTeam from "../img/logos/logo_sion.png";
+import awayTeam from "../img/logos/logo_aix.png";
 
 function lastMatch() {
     return (
@@ -13,11 +13,11 @@ function lastMatch() {
                     <div className='lastMatchContent'>
                         <img src={homeTeam} alt="Logo équipe domicile"/>
                         <div className='lastMatchResult'>
-                            <span className='score'>1-0</span>
+                            <div className='score'>1<span className='score_separator'>-</span>4</div>
                         </div>
                         <img src={awayTeam} alt="Logo équipe extérieur"/>
                     </div>
-                    <span className='matchHashtag'>#AixFCN</span>
+                    <span className='matchHashtag'>#SIONAIX</span>
                 </div>
                 <div className="lastMatchButtons">
                     <Link className='button c2' to={"/"}>Actualités</Link>
